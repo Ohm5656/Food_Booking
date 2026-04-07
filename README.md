@@ -1,35 +1,35 @@
 # Food Booking
 
-Front-end prototype สําหรับระบบจองบุฟเฟต์โรงแรมในธีม `LUMIERE` พัฒนาด้วย Vite + React โดยแยกประสบการณ์ใช้งานออกเป็น 2 ฝั่งคือ ลูกค้าและพนักงาน เพื่อสาธิต flow การจองโต๊ะ การเลือกแพ็กเกจ การชําระเงิน และการจัดการที่นั่งภายในร้าน
+Front-end prototype for a hotel buffet reservation system under the `LUMIERE` theme, built with Vite + React. The app separates the experience into two main sides: customer and staff, covering table reservations, package selection, payment flow, and in-restaurant seating management.
 
 ## Overview
 
-โปรเจกต์นี้เป็น single-page application ที่เน้นงาน UI/UX และการจําลองการใช้งานจริงของระบบจองบุฟเฟต์โรงแรม
+This project is a single-page application focused on UI/UX and realistic booking flow simulation for a hotel buffet reservation system.
 
-- ฝั่งลูกค้าเริ่มจากหน้า splash, หน้าเลือกห้องอาหาร/โปรโมชัน, หน้ารายละเอียดร้าน, flow การจอง 4 ขั้นตอน และหน้าสําเร็จหลังชําระเงิน
-- ฝั่งพนักงานมีหน้าเข้าสู่ระบบ, dashboard สรุปสถานะรอบบริการ, รายการ booking และหน้าจัดการผังโต๊ะ
-- ข้อมูลในระบบเป็น mock data ภายในไฟล์ React component ยังไม่ได้เชื่อมต่อ backend หรือฐานข้อมูลจริง
+- The customer side includes a splash screen, restaurant and promotion browsing, restaurant detail page, a 4-step booking flow, and a booking success screen.
+- The staff side includes a login screen, service dashboard, booking list, and seating management interface.
+- All data is currently mocked inside React components and is not connected to a real backend or database.
 
 ## Features
 
 ### Customer flow
 
-- หน้าแรกแบบ mobile-first พร้อมแยกทางเข้า `Customer` และ `Staff`
-- หน้า customer home มี hero section, ไฮไลต์บริการ, promotion, notification sheet และเมนูผู้ใช้
-- หน้ารายละเอียดร้านอาหารมีข้อมูลแพ็กเกจ, เมนูเด่น, โปรโมชัน และเงื่อนไขการจอง
-- หน้า booking flow แบ่งเป็น 4 step:
-  - เลือกวัน เวลา และจํานวนผู้ใช้บริการ
-  - เลือกแพ็กเกจบุฟเฟต์
-  - กรอกข้อมูลผู้จองและ special requests
-  - สรุปรายการ, ใส่ promo code และจําลองการชําระเงิน
-- หน้ายืนยันการจองแสดง booking ID และ QR code แบบ mock
+- Mobile-first landing screen with separate entry points for `Customer` and `Staff`
+- Customer home screen with hero section, service highlights, promotions, notification sheet, and user menu
+- Restaurant detail screen with package previews, featured menu items, promotions, and booking policies
+- 4-step booking flow:
+  - Select date, time, and party size
+  - Choose a buffet package
+  - Enter customer information and special requests
+  - Review order summary, apply promo code, and simulate payment
+- Booking confirmation screen with mock booking ID and QR code
 
 ### Staff flow
 
-- หน้า login สําหรับพนักงาน
-- Dashboard สรุป booking วันนี้, โต๊ะว่าง, ลูกค้าที่รอ check-in และงานด่วน
-- หน้า booking list พร้อม search, filter pill และสถานะการชําระเงิน/การจัดโต๊ะ
-- หน้า seating management มีทั้งมุมมอง floor plan และ list view พร้อม bottom sheet รายละเอียดโต๊ะ
+- Staff login screen
+- Dashboard showing booking summary, available tables, waiting check-ins, and urgent tasks
+- Booking list with search, filter pills, payment status, and seating status
+- Seating management screen with both floor plan view and list view, plus a bottom sheet for table details
 
 ## Tech Stack
 
@@ -40,7 +40,7 @@ Front-end prototype สําหรับระบบจองบุฟเฟต
 - Motion
 - Lucide React
 - Sonner
-- Radix UI components บางส่วน
+- Selected Radix UI components
 
 ## Project Structure
 
@@ -61,24 +61,24 @@ src/
 
 ### Public / customer
 
-- `/` หน้าเลือกบทบาทผู้ใช้งาน
-- `/customer` หน้า customer home
-- `/customer/restaurant/:id` หน้ารายละเอียดร้านอาหาร
-- `/customer/booking/:id` flow การจอง
-- `/customer/success` หน้าสําเร็จหลังจอง
+- `/` role selection screen
+- `/customer` customer home screen
+- `/customer/restaurant/:id` restaurant detail page
+- `/customer/booking/:id` booking flow
+- `/customer/success` booking success page
 
 ### Staff
 
-- `/staff` หน้า login พนักงาน
-- `/staff/app` dashboard พนักงาน
-- `/staff/app/bookings` รายการ booking
-- `/staff/app/seating` หน้าจัดการผังโต๊ะ
+- `/staff` staff login screen
+- `/staff/app` staff dashboard
+- `/staff/app/bookings` booking list
+- `/staff/app/seating` seating management
 
 ## Getting Started
 
 ### Requirements
 
-- Node.js 20+ แนะนําให้ใช้เวอร์ชัน LTS
+- Node.js 20+ recommended
 - npm 10+
 
 ### Install
@@ -87,13 +87,13 @@ src/
 npm install
 ```
 
-### Run development server
+### Run the development server
 
 ```bash
 npm run dev
 ```
 
-### Build production
+### Build for production
 
 ```bash
 npm run build
@@ -101,10 +101,10 @@ npm run build
 
 ## Notes
 
-- โปรเจกต์นี้เป็น front-end prototype เพื่อสาธิตหน้าจอและ interaction
-- การเข้าสู่ระบบ, การชําระเงิน, การค้นหา และการจัดโต๊ะยังเป็น mock behavior
-- รูปภาพส่วนใหญ่ดึงจาก URL ภายนอกเพื่อใช้ประกอบงานออกแบบ
+- This project is a front-end prototype built to demonstrate screens and interactions.
+- Login, payment, search, and seating actions are currently mock behaviors.
+- Most images are loaded from external URLs for design and presentation purposes.
 
 ## Design Source
 
-ต้นฉบับเริ่มจาก Figma code bundle และถูกปรับให้อยู่ในรูปแบบโปรเจกต์ React/Vite ภายใน repository นี้
+This repository started from a Figma code bundle and was adapted into a React/Vite project structure.

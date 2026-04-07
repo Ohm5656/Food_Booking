@@ -9,6 +9,8 @@ import StaffLayout from "./screens/staff/StaffLayout";
 import StaffDashboard from "./screens/staff/StaffDashboard";
 import StaffBookingList from "./screens/staff/StaffBookingList";
 import SeatingManagement from "./screens/staff/SeatingManagement";
+import CheckIn from "./screens/staff/CheckIn";
+import More from "./screens/staff/More";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +39,8 @@ export const router = createBrowserRouter([
           { index: true, Component: StaffDashboard },
           { path: "bookings", Component: StaffBookingList },
           { path: "seating", Component: SeatingManagement },
+          { path: "checkin", Component: CheckIn },
+          { path: "more", Component: More },
         ]
       }
     ]

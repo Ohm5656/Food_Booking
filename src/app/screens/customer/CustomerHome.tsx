@@ -144,7 +144,7 @@ export default function CustomerHome() {
               <span className="md:mt-2 md:block">บุฟเฟ่ต์ระดับพรีเมียม</span>
             </h1>
             <p className="text-slate-300 md:text-lg font-light mb-8 text-sm max-w-sm md:max-w-lg leading-relaxed">
-              ยกระดับมื้อพิเฉษของคุณด้วยวัตถุดิบชั้นเลิศที่คัดสรรมาอย่างพิถีพิถัน
+              ยกระดับมื้อพิเศษของคุณด้วยวัตถุดิบชั้นเลิศที่คัดสรรมาอย่างพิถีพิถัน
               พร้อมบริการเหนือระดับ
             </p>
             <div className="flex flex-col md:flex-row gap-4 w-full max-w-md">
